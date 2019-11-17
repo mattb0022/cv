@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>KB Article</title>
+  </head>
+  <body>
+    <h1 id="articleTitleReadonly" class="snc-article-header-title-readonly snc-article-header-toolbar-title-no-image">Panera&nbsp;Tier 1 Hosted UC Troubleshooting</h1>
+    <div id="articleNumberReadonly" class="snc-article-header-number-readonly">&nbsp;</div>
+    <div id="article" class="snc-article-content-text row" style="display: block;">
+      <p style="padding-left: 30px;"><span style="font-size: 10pt;"><strong>The standard configuration, each store has&nbsp;Cisco MPP 8811 phones and a Yealink W60B cordless phone. There is 1 user and both phones are setup as shared call appearances
+            under that user. Some sites may have additional phones as needed.</strong></span></p>
+      <p>&nbsp;</p>
+      <details open="">
+        <p>&nbsp;</p>
+        <p style="padding-left: 30px;"><span style="color: #3366ff; font-size: 12pt; background-color: #ffffff;">Panera Tier 1 contacting the CBTS Service Desk</span></p>
+        <p>&nbsp;</p>
+        <p style="padding-left: 30px;"><span style="font-size: 10pt;">Panera Tier 1 will be troubleshooting the physical phones&nbsp;with the end users in the store.&nbsp;&nbsp;&nbsp;Panera Tier 1 will be contacting the CBTS Service Desk for ticket
+            creation for GSD -Support.&nbsp;&nbsp;&nbsp; Before we send the Incident to GSD-Support,&nbsp;&nbsp; the CBTS Service Desk will need to perform the following step since Panera does not have access to Broadworks.&nbsp;&nbsp; The Panera Desk
+            should be calling in with the store on the line to confirm services after completing the following steps</span></p>
+        <p style="padding-left: 30px;">&nbsp;</p>
+        <p>&nbsp;</p>
+        <p style="padding-left: 30px;"><span style="color: #3366ff; font-size: 12pt;">Change the authentication password in Broadworks</span></p>
+        <ol style="list-style-position: inside;">
+          <li>Navigate to the User -&gt; Utilities -&gt; Authentication<br /><img src="https://cbts.service-now.com/sys_attachment.do?sys_id=0dd847601b43bb807d43dd7edd4bcb1d" width="414" height="196" /></li>
+          <li>Change the password to a random password, and then click "Apply".<br /><img src="https://cbts.service-now.com/sys_attachment.do?sys_id=bd1947601b43bb807d43dd7edd4bcb54" width="517" height="208" /></li>
+          <li>Rebuild the files by navigating to the device profile (Addresses screen if Primary, or Call Control if SCA) -&gt;&nbsp; "Configure Identify/Device Profile" -&gt; Click on the "Files Tab" -&gt; Click on "Rebuild the files (force)".<br /><img
+              src="https://cbts.service-now.com/sys_attachment.do?sys_id=94c98fa01b43bb807d43dd7edd4bcbc5" width="651" height="242" /></li>
+          <li>Have the customer reboot the device. Did this resolve the issue?
+            <ul style="list-style-position: inside;">
+              <li><strong>Yes:</strong>
+                <ul style="list-style-position: inside;">
+                  <li>Resolve the incident.</li>
+                </ul>
+              </li>
+              <li>No:
+                <ul style="list-style-position: inside;">
+                  <li>Assign the INC to the GSD-Support Queue - Please capture <strong>all</strong> the information and place in the INC before sending to GSD-Support</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <p>&nbsp;&nbsp;</p>
+        <p style="margin: 0in 0in 0pt 0.5in; line-height: normal; text-indent: -0.25in; padding-left: 30px;"><span style="color: #343d47; font-size: 10pt;"><span style="font-family: Calibri;">1.</span><span
+              style="font: 7pt/normal 'Times New Roman'; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="color: #343d47; font-size: 10pt;"><span style="font-family: Calibri;">Verbal Confirmation
+              that Location&rsquo;s Network is functional</span></span></p>
+        <p style="margin: 0in 0in 0pt 0.5in; line-height: normal; text-indent: -0.25in; padding-left: 30px;"><span style="color: #343d47; font-size: 10pt;"><span style="font-family: Calibri;">2.</span><span
+              style="font: 7pt/normal 'Times New Roman'; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="color: #343d47; font-size: 10pt;"><span style="font-family: Calibri;">DID</span></span></p>
+        <p style="margin: 0in 0in 0pt 0.5in; line-height: normal; text-indent: -0.25in; padding-left: 30px;"><span style="color: #343d47; font-size: 10pt;"><span style="font-family: Calibri;">3.</span><span
+              style="font: 7pt/normal 'Times New Roman'; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="color: #343d47; font-size: 10pt;"><span style="font-family: Calibri;">Mac
+              Address</span></span></p>
+        <p style="margin: 0in 0in 0pt 0.5in; line-height: normal; text-indent: -0.25in; padding-left: 30px;"><span style="color: #343d47; font-size: 10pt;"><span style="font-family: Calibri;">4.</span><span
+              style="font: 7pt/normal 'Times New Roman'; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="color: #343d47; font-size: 10pt;"><span style="font-family: Calibri;">Locations Address
+            </span></span></p>
+        <p style="margin: 0in 0in 0pt 0.5in; line-height: normal; text-indent: -0.25in; padding-left: 30px;"><span style="color: #343d47; font-size: 10pt;"><span style="font-family: Calibri;">5.</span><span
+              style="font: 7pt/normal 'Times New Roman'; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="color: #343d47; font-size: 10pt;"><span style="font-family: Calibri;">IPv4 Address
+            </span></span></p>
+        <p style="margin: 0in 0in 0pt 0.5in; line-height: normal; text-indent: -0.25in; padding-left: 30px;"><span style="color: #343d47; font-size: 10pt;"><span style="font-family: Calibri;">6.</span><span
+              style="font: 7pt/normal 'Times New Roman'; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="color: #343d47; font-size: 10pt;"><span style="font-family: Calibri;">VLAN ID</span></span>
+        </p>
+        <p style="margin: 0in 0in 0pt 0.5in; line-height: normal; text-indent: -0.25in; padding-left: 30px;"><span style="color: #343d47; font-size: 10pt;"><span style="font-family: Calibri;">7.</span><span
+              style="font: 7pt/normal 'Times New Roman'; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="color: #343d47; font-size: 10pt;"><span style="font-family: Calibri;">Error on
+              Screen</span></span></p>
+        <p style="margin: 0in 0in 8pt 0.5in; line-height: normal; text-indent: -0.25in; padding-left: 30px;"><span style="color: #343d47; font-size: 10pt;"><span style="font-family: Calibri;">8.</span><span
+              style="font: 7pt/normal 'Times New Roman'; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="color: #343d47; font-size: 10pt;"><span style="font-family: Calibri;">Results of Factory
+              Reset</span></span></p>
+        <p style="margin: 0in 0in 8pt 0.5in; line-height: normal; text-indent: -0.25in; padding-left: 30px;"><span style="color: #343d47; font-size: 10pt;"><span style="font-family: Calibri;"><span style="color: #343d47; font-size: 10pt;"><span
+                  style="font-family: Calibri;">9.&nbsp;&nbsp;&nbsp; Confirmation Broadworks password authentication</span></span></span></span></p>
+        <p style="margin: 0in 0in 8pt 0.5in; line-height: normal; text-indent: -0.25in;">&nbsp;</p>
+        <p style="margin: 0in 0in 8pt 0.5in; line-height: normal; text-indent: -0.25in;">&nbsp;</p>
+        <p style="margin: 0in 0in 8pt 0.5in; line-height: normal; text-indent: -0.25in;"><span style="color: #343d47; font-size: 14pt;"><span style="font-family: Calibri;">The below process is for reference only or if Panera is asking the CBTS Service
+              Desk to perform troubleshooting with the end user on the line.&nbsp;&nbsp;&nbsp;&nbsp; </span></span></p>
+        <p><strong>&nbsp;</strong></p>
+        <p>&nbsp;</p>
+      </details>
+      <details>
+        <summary style="color: #0556a7; font-size: 15px; margin-left: 40px;">Yealink Troubleshooting</summary>
+        <p><img src="https://cbts.service-now.com/sys_attachment.do?sys_id=bff3a7291b1e77087d43dd7edd4bcb2f" width="433" height="331" /></p>
+        <p style="padding-left: 30px;"><strong>Yealink W60B base LEDs &ndash; The base station has 3 LEDs that can be used to help troubleshoot issues</strong></p>
+        <ol style="list-style-position: inside;" start="1" type="1">
+          <li>Registration - After at least one handset registered to the base station, the registration LED illuminates solid green. Follow instructions below for pairing a handset.</li>
+          <li>Power &ndash; This LED should be solid green if the base station has power. If LED is off, please ensure that it is connected to a PoE switch or power adapter is connected.</li>
+          <li>Network &ndash; If this LED is flashing, the base station is not connected to a network or cannot get an IP address. It will turn solid green once it has connected to a network. Try connecting the base station to another switch port, if the
+            network indicator still slowly flashes, try factory resetting the base.</li>
+        </ol>
+        <div>
+          <p style="padding-left: 30px;"><strong>Reset to factory settings</strong></p>
+        </div>
+        <p style="padding-left: 30px;">This step is not required for brand new out-of-the-box phones; however, if the phone has been already used then it is necessary.</p>
+        <ul style="list-style-position: inside;">
+          <li>Press&nbsp;<strong>OK</strong>&nbsp;button on Your handset.</li>
+          <li>Go to&nbsp;<strong>Settings</strong>&nbsp;menu.</li>
+          <li>Go to&nbsp;<strong>System Settings</strong>&nbsp;submenu and select&nbsp;<strong>Base Reset</strong>&nbsp;option.</li>
+          <li>Enter Your PIN.&nbsp;<strong><em>NOTE:</em></strong><em>&nbsp;</em><em>Default PIN is&nbsp;<strong>0000</strong>.</em></li>
+          <li>Select&nbsp;<strong>Reset to factory</strong>&nbsp;option.</li>
+          <li>Confirm with&nbsp;<strong>OK</strong>&nbsp;button on prompt.</li>
+          <li>Wait sometime prior for device to reboot.</li>
+        </ul>
+        <p style="padding-left: 30px;"><strong>After you attempt these solutions, if the Yealink is still experiencing issues, escalate ticket to GSD Support </strong></p>
+        <details>
+          <summary style="color: #0556a7; font-size: 15px; margin-left: 40px;">Required Information</summary>
+          <ol style="list-style-position: inside;">
+            <li style="list-style: none;">
+              <ol style="list-style-position: inside;">
+                <li>DID:</li>
+                <li>Mac Address:</li>
+                <li>Model: &nbsp;</li>
+                <li>Locations Address:</li>
+                <li>LCON:</li>
+                <li>Network Status:</li>
+                <li>IPv4 Address:</li>
+                <li>VLAN ID:</li>
+                <li>Error on screen:</li>
+                <li>Results of Factory Reset</li>
+              </ol>
+            </li>
+          </ol>
+          <p>&nbsp;</p>
+        </details>
+      </details>
+      <details>
+        <summary style="color: #0556a7; font-size: 15px; margin-left: 40px;">Registering Handset to the Yealink Base</summary>
+        <p style="padding-left: 30px;"><strong>To register a new handset manually:</strong></p>
+        <p style="padding-left: 30px;">When the handset LCD screen prompts &ldquo;Press base page 2s then press Reg.&rdquo;, long press on the base station till the registration LED flashes.</p>
+        <p style="padding-left: 30px;">&nbsp;</p>
+        <p style="padding-left: 30px;"><strong>Easy Registration:</strong></p>
+        <p style="padding-left: 30px;">Press the Reg soft key on the handset to register quickly.</p>
+        <p><strong>&nbsp;</strong></p>
+        <p style="padding-left: 30px;"><strong>Normal Registration:</strong></p>
+        <p style="padding-left: 30px;">Press the OK soft key on the handset, and then select Register Handset.</p>
+        <p style="padding-left: 30px;">Select the desired base and then press the OK soft key. The handset begins searching the base.</p>
+        <p style="padding-left: 30px;">Press the OK soft key after searching a base successfully.</p>
+        <p style="padding-left: 30px;">Enter the base PIN 2287, and then press the Done soft key to complete registration.</p>
+        <p style="padding-left: 30px;">After the success of registration, the handset LCD screen prompts &ldquo;Handset Subscribed&rdquo; and &ldquo;Base NO. (The last 4 characters of connected Base&rsquo;s MAC address)&rdquo;. After initializing data
+          successfully, an icon with internal handset number and handset name appears on the LCD screen.</p>
+        <p style="padding-left: 30px;">&nbsp;</p>
+        <p style="padding-left: 30px;">Note: If the handset LCD screen prompts &ldquo;Searching for Base&rdquo;, please check if your base station is powered on.</p>
+        <p style="padding-left: 30px;">&nbsp;</p>
+      </details>
+      <details>
+        <summary style="color: #0556a7; font-size: 15px; margin-left: 40px;">Cisco MPP 8811 Troubleshooting</summary>
+        <p><img src="https://cbts.service-now.com/sys_attachment.do?sys_id=f016a7e11b5e77087d43dd7edd4bcb61" /></p>
+        <details>
+          <p>&nbsp;</p>
+          <p><span style="font-size: 12pt;"><span style="font-size: 12pt;"><span style="font-size: 12pt;"><span style="font-size: 12pt;"><span style="font-size: 12pt;"><span style="font-size: 12pt;"><span style="font-size: 12pt;"><span
+                            style="font-size: 12pt;">&nbsp;</span></span></span></span></span></span></span></span></p>
+        </details>
+        <p>&nbsp;</p>
+        <details>
+          <p>&nbsp;</p>
+          <summary style="color: #0556a7; font-size: 15px; margin-left: 40px;">Verify Network Connectivity&nbsp;</summary>
+          <p>&nbsp;</p>
+          <ol style="list-style-position: inside;">
+            <li>Press&nbsp;<strong>Applications</strong>&nbsp;</li>
+          </ol>
+          <ol style="list-style-position: inside;" start="2" type="1">
+            <li>&nbsp;Select&nbsp;<strong>Status</strong>&nbsp;&gt;&nbsp;<strong>Network Status</strong></li>
+          </ol>
+          <p style="padding-left: 30px;"><strong>You can view the following information: (NOTE ALL OF THIS)</strong></p>
+          <ul style="list-style-position: inside;" type="disc">
+            <li><strong>Network type</strong>&mdash;Indicates the type of Local Area Network (LAN) connection that the phone uses.</li>
+            <li><strong>Network status</strong>&mdash;Indicates if the phone is connected to a network.</li>
+            <li><strong>IPv4 status</strong>&mdash;IP address of the phone. You can see information on IP address, Addressing type, IP status, Subnet mask, Default router, Domain Name Server (DNS) 1, DNS 2 of the phone.</li>
+            <li><strong>VLAN ID</strong>&mdash;VLAN ID of the phone.</li>
+            <li><strong>MAC address</strong>&mdash;Unique Media Access Control (MAC) address of the phone.</li>
+          </ul>
+          <p style="padding-left: 30px;">&nbsp;If the phone is not getting an IP address or the network status show disconnected, follow the steps to verify the network port is functional.</p>
+          <details>
+            <summary style="color: #0556a7; font-size: 15px; margin-left: 40px;">Verifying The Network Port is Functional</summary>
+            <ol style="list-style-position: inside;" start="1" type="1">
+              <li>Exchange the Ethernet cables with cables that you know are functional.</li>
+              <li>Disconnect a functioning Cisco IP Phone from another port and connect it to this network port to verify that the port is active.</li>
+              <li>Connect the Cisco IP Phone that does not start up to a different network port that is known to be good.</li>
+              <li>Connect the Cisco IP Phone that does not start up directly to the port on the switch, eliminating the patch panel connection in the office.</li>
+            </ol>
+            <p>&nbsp;</p>
+          </details>
+        </details>
+        <details>
+          <summary style="color: #0556a7; font-size: 15px; margin-left: 40px;">Verify the Phone Has Power</summary>
+          <ol style="list-style-position: inside;" start="1" type="1">
+            <li>If you are using external power, verify that the electrical outlet is functional.</li>
+            <li>If you are using in-line power, use the external power supply instead.</li>
+            <li>If you are using the external power supply, switch with a unit that you know to be functional.</li>
+          </ol>
+        </details>
+        <p style="padding-left: 30px;">If the phone still does not start up properly, power up the phone with the handset off-hook. When the phone is powered up in this way, it attempts to launch a backup software image. If the phone still does not start
+          up properly, perform a factory reset of the phone.</p>
+        <details>
+          <summary style="color: #0556a7; font-size: 15px; margin-left: 40px;">Factory Resetting Cisco MPP 8811 Phone</summary>
+          <ol style="list-style-position: inside;" start="1" type="1">
+            <li>Remove power from the phone in one of these ways:</li>
+          </ol>
+          <ul style="list-style-position: inside;" type="disc">
+            <li>Unplug the power adapter.</li>
+            <li>Unplug the LAN cable.</li>
+          </ul>
+          <ol style="list-style-position: inside;" start="2" type="1">
+            <li>Wait 5 seconds.</li>
+            <li>Press and hold # and plug the phone back in.</li>
+            <li>When the Headset and Speaker buttons are lit, release # and enter the following key sequence:</li>
+          </ol>
+          <p style="padding-left: 30px;">123456789*0#</p>
+          <p style="padding-left: 30px;">The light for the Headset button turns off after you press the 1 key. After you enter the key sequence, the Mute button lights.</p>
+          <p style="padding-left: 30px;"><strong>Caution: Do not power down the phone until it completes the factory reset process, and the main screen appears.</strong></p>
+        </details>
+        <p>&nbsp;</p>
+        <details>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+        </details>
+        <details>
+          <li></li>
+        </details>
+      </details>
+    </div>
+  </body>
+</html>
